@@ -29,9 +29,9 @@ Ref: users.id < tasks.user_id [delete: cascade]
 
 </details>
 
-1. Create a new Postgres database named `tasklist`.
-2. Create tables in `schema.sql` according to the schema above.
-3. Seed the database with at least 1 user owning at least 3 tasks.
+✅ 1. Create a new Postgres database named `tasklist`.
+✅2. Create tables in `schema.sql` according to the schema above.
+✅3. Seed the database with at least 1 user owning at least 3 tasks.
 
 ## API
 
@@ -44,12 +44,13 @@ If a valid token is not provided, immediately send a 401 Unauthorized error.
 `/users` router
 
 - `POST /users/register`
-  - sends 400 if request body is missing username or password
-  - creates a new user with the provided credentials and sends a token
-  - the password should be hashed in the database
+  ✅ - sends 400 if request body is missing username or password
+  ✅- creates a new user with the provided credentials and sends a token
+  ✅- the password should be hashed in the database
 - `POST /users/login`
+  ✅// changed to 401 per failed tests
   - sends 400 if request body is missing username or password
-  - sends a token if the provided credentials are valid
+    ✅ - sends a token if the provided credentials are valid
 
 `/tasks` router
 
